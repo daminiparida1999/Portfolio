@@ -1,26 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Damini Parida's Portfolio</title>
+    <title>Damini Parida | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>I'm Damini Parida, an HR Executive with expertise in SAP CPI and SuccessFactors Integration.</p>
+        <div class="container">
+            <h1>Damini Parida</h1>
+            <p>Kalyan Nagar HRBR Layout, Bangalore | Phone: +91 8847877532 | Email: <a
+                    href="mailto:paridadamini14@gmail.com">paridadamini14@gmail.com</a></p>
+        </div>
     </header>
-    
-    <section>
-        <h2>About Me</h2>
-        <p>Here is a brief introduction about me, my skills, and experience...</p>
-        <!-- Add a link to the README file for more detailed sections -->
-        <a href="README.md">Click here for my full portfolio details</a>
-    </section>
-
+    <div class="main-container">
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#profile" onclick="showSection('profile')">Profile</a></li>
+                <li><a href="#experience" onclick="showSection('experience')">Experience</a></li>
+                <li><a href="#skills" onclick="showSection('skills')">Skills</a></li>
+                <li><a href="#education" onclick="showSection('education')">Education</a></li>
+                <li><a href="#languages" onclick="showSection('languages')">Languages</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <section id="profile" class="content-section active">
+                <h2>Profile</h2>
+                <p>Highly motivated and adaptable professional with expertise in SAP Cloud Integration and HR
+                    operations. Transitioning from an HR Executive role to a technical focus on SAP Cloud Platform
+                    Integration, leveraging skills in API integration, error handling, and mapping. Dedicated to
+                    continuous learning and delivering impactful solutions.</p>
+            </section>
+            <section id="experience" class="content-section">
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <h3>SAP Cloud Integration Developer (Intern)</h3>
+                    <span>July 2024 – Nov 2024</span>
+                    <ul>
+                        <li>Developed and tested integration scenarios using tools like Postman and ServiceNow.</li>
+                        <li>Created and optimized Groovy Scripts and XSLT mappings for efficient data transformation.
+                        </li>
+                        <li>Built and tested REST and SOAP APIs, ensuring high reliability and performance.</li>
+                        <li>Configured robust error handling mechanisms to manage exceptions and retries.</li>
+                        <li>Designed advanced routing logic to facilitate seamless message flow between diverse systems.
+                        </li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>HR Executive – Date The Ramp</h3>
+                    <span>July 2022 – Apr 2024</span>
+                    <ul>
+                        <li>Prepared salary payrolls accurately using Microsoft Excel, ensuring timely and error-free
+                            salary disbursements.</li>
+                        <li>Managed end-to-end recruitment processes including sourcing, screening, and interviewing
+                            candidates.</li>
+                        <li>Developed and implemented HR policies to improve workplace efficiency and employee
+                            satisfaction.</li>
+                        <li>Organized and conducted activities to foster a positive work environment.</li>
+                        <li>Administered employee benefits and compensation programs.</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="skills" class="content-section">
+                <h2>Skills & Abilities</h2>
+                <div class="skills-list">
+                    <div>
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>SAP Cloud Platform Integration (CPI)</li>
+                            <li>Postman, ServiceNow</li>
+                            <li>Groovy Script, XSLT</li>
+                            <li>API Integration, Message Mapping, Error Handling</li>
+                            <li>Batch Processing, Routing</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li>Communication and Collaboration</li>
+                            <li>Team Management</li>
+                            <li>Problem-Solving</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="education" class="content-section">
+                <h2>Education</h2>
+                <p>MBA - Trident Academy of Creative Technology (2022)</p>
+            </section>
+            <section id="languages" class="content-section">
+                <h2>Languages</h2>
+                <ul>
+                    <li>English (Proficient)</li>
+                    <li>Hindi (Fluent)</li>
+                    <li>Odia (Fluent)</li>
+                </ul>
+            </section>
+        </main>
+    </div>
     <footer>
-        <p>&copy; 2024 Damini Parida</p>
+        <p>&copy; 2024 Damini Parida. All rights reserved.</p>
     </footer>
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
 </body>
+
 </html>
